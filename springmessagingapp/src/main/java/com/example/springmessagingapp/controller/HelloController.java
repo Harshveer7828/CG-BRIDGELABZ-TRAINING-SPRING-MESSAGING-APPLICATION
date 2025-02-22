@@ -31,4 +31,10 @@ public class HelloController {
         return "Hello " + user.getFirstName() + " " +user.getLastName() + " from BridgeLabz ";
     }
 
+    // PUT request to extract first name and last name;
+    @PutMapping("/user/{firstname}/lastname")
+    public String displayNamePut(@PathVariable String firstname,@RequestParam String lastname){
+        return "Hello " + firstname + " " + lastname + " From BridgeLabz";
+    }
+
 }
